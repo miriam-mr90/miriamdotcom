@@ -1,0 +1,94 @@
+// http://codepen.io/DLCoder/pen/QNMqZV
+.progress-radial-animation
+
+  // Variables are declared in _about-me file
+  $circle-bg: #d6dadc
+  $circle-color: $mainColor
+  $circle-size: 180px
+  $transition-length: 1.7s
+  $inset-size: 145px
+  $inset-color: #fbfbfb
+  $shadow: 6px 6px 10px rgba(0,0,0,.2)
+  $increment: 180deg/100
+  $percentage-color: $textColor
+  $percentage-font-size: 16px
+  $percentage-text-width: 88px 
+  
+
+  .progress-radial
+    background-color: $circle-bg
+    width: $circle-size
+    height: $circle-size
+    border-radius: 50%
+
+    .circle 
+      .mask, .fill
+        width: $circle-size
+        height: $circle-size
+        position: absolute
+        border-radius: 50%
+        transition: -webkit-transform $transition-length
+        transition: -ms-transform $transition-length
+        transition: transform $transition-length
+        -webkit-backface-visibility: hidden
+      .mask
+        clip: rect(0px, $circle-size, $circle-size, $circle-size/2)
+        .fill
+          clip: rect(0px, $circle-size/2, $circle-size, 0px)
+          background-color: $circle-color
+    .circle
+      .shadow 
+      width: $circle-size
+      height: $circle-size
+      position: absolute
+      border-radius: 50%
+      box-shadow: $shadow inset
+          
+    .inset
+      width: $inset-size
+      height: $inset-size
+      position: absolute
+      margin-left: ($circle-size - $inset-size)/2
+      margin-top: ($circle-size - $inset-size)/2
+      background-color: $inset-color
+      border-radius: 50%
+      box-shadow: $shadow
+      .percentage
+        width: $percentage-text-width
+        height: $percentage-font-size + 26
+        position: absolute
+        top: (($inset-size - $percentage-font-size) / 2) - 10
+        left: ($inset-size - $percentage-text-width) / 2
+        line-height: 1
+        transition: width $transition-length
+        overflow: hidden
+        .numbers
+          margin-top: -$percentage-font-size
+          transition: width $transition-length
+          span
+            width: $percentage-text-width
+            display: inline-block
+            vertical-align: top
+            text-align: center
+            font-weight: 800
+            font-size: $percentage-font-size
+            color: $percentage-color
+
+  .in-view .progress-radial
+    @for $i from 1 through 100
+      &[data-progress="#{$i}"]
+        .circle
+          .mask.full, .fill
+            -webkit-transform: rotate($increment * $i)
+            -ms-transform: rotate($increment * $i)
+            transform: rotate($increment * $i)
+        .inset .percentage .numbers
+          width: $i*$percentage-text-width + $percentage-text-width
+    
+        
+
+
+
+    
+
+  

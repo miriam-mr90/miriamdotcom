@@ -1,0 +1,72 @@
+
+header.home-page{
+	padding-top: 30px;
+	height: 100vh;
+	background-image: url("../images/workspace_01.png");
+	background-position: bottom;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	
+	@media only screen and (max-device-width: 380px){
+	  
+		background-image: url("../images/workspace_01_mobile.png");		 
+	}	
+
+	position: relative;
+		
+	.header-aux{
+ 		 @include centerer;
+	}
+	h1{
+		color: $titleColor;
+		@include title-font(48px);
+
+	    text-shadow: 0 1px 3px rgba(0,0,0,.25);
+	}
+	h4{
+		color: $subtitleColor;
+	    text-shadow: 0 1px 3px rgba(0,0,0,.25);
+
+
+		letter-spacing: .07em;
+		overflow: hidden; /* Ensures the content is not revealed until the animation */
+		border-right: .1em solid #FFF; /* The typwriter cursor */
+		white-space: nowrap; /* Keeps the content on a single line */
+		width: 11.5em;
+		margin: 0 auto;
+		animation: type 4s steps(60, end), blink-caret .75s step-end infinite; 
+		
+	}
+	[class^="icon-"]{
+		color: $subtitleColor;
+	    font-size: 28px;
+	    margin-top: 50px;
+	    display: block;
+		cursor: pointer;
+	    
+
+	    -webkit-transform: perspective(1px) translateZ(0);
+	    transform: perspective(1px) translateZ(0);
+
+	    &:hover{
+			-webkit-animation-name: hvr-hang-sink, hvr-hang;
+		    animation-name: hvr-hang-sink, hvr-hang;
+		    -webkit-animation-duration: .3s, 1.5s;
+		    animation-duration: .3s, 1.5s;
+		    -webkit-animation-delay: 0s, .3s;
+		    animation-delay: 0s, .3s;
+		    -webkit-animation-timing-function: ease-out, ease-in-out;
+		    animation-timing-function: ease-out, ease-in-out;
+		    -webkit-animation-iteration-count: 1, infinite;
+		    animation-iteration-count: 1, infinite;
+		    -webkit-animation-fill-mode: forwards;
+		    animation-fill-mode: forwards;
+		    -webkit-animation-direction: normal, alternate;
+		    animation-direction: normal, alternate;
+
+	    }
+	}
+}

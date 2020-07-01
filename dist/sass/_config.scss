@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis|Pacifico|Gloria+Hallelujah|Cabin+Sketch');
+
+// Centering container
+@mixin centerer($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+  	-ms-transform: translate(-50%, -50%); /* IE 9 */
+  	transform: translate(-50%, -50%); /* IE 10, Fx 16+, Op 12.1+ */
+    
+  } @else if ($horizontal) {
+    left: 50%;
+    -webkit-transform: translate(-50%, 0); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+  	-ms-transform: translate(-50%, 0); /* IE 9 */
+  	transform: translate(-50%, 0); /* IE 10, Fx 16+, Op 12.1+ */
+    
+  } @else if ($vertical) {
+    top: 50%;
+    -webkit-transform: translate(0, -50%); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+  	-ms-transform: translate(0, -50%); /* IE 9 */
+  	transform: translate(0, -50%); /* IE 10, Fx 16+, Op 12.1+ */
+    
+  }
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// Fonts
+@mixin text-font($size: 16px) {
+	font-size: $size;
+	font-family: 'Dosis', sans-serif;
+}
+@mixin title-font($size: 24px) {
+	font-size: $size;
+	font-family: 'Pacifico', cursive;
+}
+@mixin handwriting-font($size: 18px) {
+  font-size: $size;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+@mixin aboutme-font($size: 18px) {
+  font-size: $size;
+  font-family: 'Cabin Sketch', cursive;
+}
+
+// Colors
+$textColor: #5D5D5D;
+$lightTextColor: #999;
+$titleColor: #FFF;
+$subtitleColor: #FFF; // #A6A6A6;
+$mainColor: #E2718D;
+$bgBodyColor: #FFF;
+$bgFooter: #4C3D6D;
+$textFooterColor: #FFF;
+$sectionTitleBorderColor: #E6E6E6; //#BFBFBF;
+
+
+$likesColor: $mainColor;
+$contactColor: $mainColor;
+$jobExperienceColor: #2A9DC6;
+$skillsColor: #D2D2D2;
+
+$bgStudiesRgba: rgba(226, 113, 141, .5);
+$bgPortfolioInforgba: rgba(226, 113, 141, .7);
+

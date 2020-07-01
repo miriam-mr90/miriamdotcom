@@ -1,0 +1,67 @@
+
+.studies{
+    width: 100%;
+	background-image: url("../images/workspace_02.png");
+	background-attachment: fixed;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+
+	@media only screen and (max-device-width: 380px){
+	  
+		background-image: url("../images/workspace_02_mobile.png");		 
+	}		
+	
+
+	.studies-bg-layer{
+	    background-color: $bgStudiesRgba;
+		padding: 30px 0 76px 0;
+	}
+
+	color: #FFF;
+	
+	.title-border{
+	    margin-bottom: 60px;
+	    width: 54px;
+	    background: rgba(255, 255, 255, .6);
+	}
+	.ico-image{
+		color: rgba(255, 255, 255, .6);
+		font-size: 62px;
+	}
+	.studies-text{
+		padding: 0 10px;
+		margin-top: 32px;
+	}
+	.studies-title{
+		font-size: 18px;
+	    padding-bottom: 12px;
+
+		&:before {
+			width: 6px;
+			height: 6px;
+			background: rgba(255, 255, 255, 0.7);
+			display: inline-block;
+			content: ".";
+			margin-right: 4px;
+			text-indent: -8px;
+			overflow: hidden;
+			border-radius: 6px;
+			margin-bottom: 2px;
+		}
+
+		span{
+			font-size: 13px;
+		}
+	}
+	.studies-description{
+		color: rgba(255, 255, 255, .7);
+		margin-top: 0;
+		font-size: 16px;
+	}
+	.studies-education .studies-title{			
+	    margin-bottom: 0;
+	    padding-bottom: 4px;
+	}
+}

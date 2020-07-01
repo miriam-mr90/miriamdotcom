@@ -1,0 +1,73 @@
+.portfolio-page-container{
+	h2{
+		margin-bottom: 30px;
+	}
+	.logo {
+		img{
+			max-width: 80%;	
+		}
+	}
+	.logo-cont{
+	    padding: 60px 30px 62px 30px;
+	}
+	.logo-dark-cont{
+		background: #C0E0D8;
+	}
+
+	.usage{
+		.usage-image{
+			background-image: url("../images/portfolio/bodas_de_mandarina/wood_bg.png");
+			background-position: 0 0;
+			background-size: cover;
+			padding: 24px 12px 22px 12px;
+		}
+		img{
+			max-width: 100%;
+		}
+	}
+
+	.colors{
+		.color-item{
+			-webkit-border-radius: 50%;
+			-moz-border-radius: 50%;
+			border-radius: 50%;
+
+			width: 60%;
+			margin: auto;
+			margin-bottom: 26px;
+
+		    -webkit-box-shadow: rgba(35,35,50,.8) 0 0 11px -2px;
+		    -moz-box-shadow: rgba(35,35,50,.8) 0 0 11px -2px;
+		    box-shadow: rgba(35,35,50,.8) 0 0 11px -2px;
+		    border: 5px solid #FFF;		    
+		}
+		.first-color{
+			background: #E5B891;
+		}
+		.second-color{
+			background: #E08E9E;
+		}
+		.third-color{
+			background: #72656E;
+		}
+		.fourth-color{
+			background: #C0E0D8;
+		}
+	}
+
+	.typography{
+		h5{
+			font-size: 24px;
+			margin-bottom: 18px;
+		}
+		.first-typography{
+			font-family: 'Loved by the King', cursive;
+		}
+		.second-typography{
+			font-family: 'Poiret One', cursive;
+		}
+		.third-typography{
+			font-family: 'Quicksand', sans-serif;
+		}
+	}
+}

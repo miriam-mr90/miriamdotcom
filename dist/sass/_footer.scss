@@ -1,0 +1,68 @@
+#footer{
+	padding: 42px 0 50px 0;
+	background: $bgFooter;
+	color: $textFooterColor;
+
+    -webkit-box-shadow: rgba(35,35,50,0.8) 0px 0px 11px -2px;
+    -moz-box-shadow: rgba(35,35,50,0.8) 0px 0px 11px -2px;
+    box-shadow: rgba(35,35,50,0.8) 0px 0px 11px -2px;
+
+    margin-top: 60px;
+
+    .thanks{
+        @include title-font(48px);
+
+
+        @media (max-width: 767px){
+           font-size: 28px;
+        }   
+    }
+
+    .scroll-top{
+    	margin-top: 50px;
+    }
+    .top{
+        .top-icon{
+            font-size: 48px;
+            display: block;
+            cursor: pointer;
+            -webkit-transform: perspective(-1px) translateZ(0);
+            transform: perspective(-1px) translateZ(0);
+
+            &:hover{
+                -webkit-animation-name: hvr-hang-sink, hvr-hang;
+                animation-name: hvr-hang-sink, hvr-hang;
+                -webkit-animation-duration: .3s, 1.5s;
+                animation-duration: .3s, 1.5s;
+                -webkit-animation-delay: 0s, .3s;
+                animation-delay: 0s, .3s;
+                -webkit-animation-timing-function: ease-out, ease-in-out;
+                animation-timing-function: ease-out, ease-in-out;
+                -webkit-animation-iteration-count: 1, infinite;
+                animation-iteration-count: 1, infinite;
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+                -webkit-animation-direction: normal, alternate;
+                animation-direction: normal, alternate;
+            }
+        }
+        .scroll-top-text{
+            font-size: 12px;
+        }
+    }
+}
+.sobre-la-web{
+    margin-top: 30px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.4);
+
+
+    .title-border{
+        width: 320px;
+        margin-bottom: 40px;
+        background: transparent;
+        -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+        box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+    }
+}

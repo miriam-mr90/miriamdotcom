@@ -1,0 +1,241 @@
+@import "_animations";
+@import "_config";
+//@import "_progress-radial-animation";
+@import "_header";
+@import "_footer";
+@import "_about-me";
+@import "_skills";
+@import "_job-experience";
+@import "_studies";
+@import "_portfolio-home";
+@import "_portfolio-page";
+
+html{
+	height: 100%;
+	box-sizing: border-box;
+}
+
+body{
+	color: $textColor;
+	background: $bgBodyColor;
+	@include text-font();
+
+    position: relative;
+    min-height: 100%;
+    margin: 0;
+
+}
+.navbar{
+	background: $mainColor;
+	border: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0; 
+
+	color: #FFF;
+
+	& li a:focus,
+	& li a:hover {
+	    background-color: rgba( 255, 255, 255, .2);
+	}
+	& a{
+		overflow:hidden;
+		padding-left: 22px;
+		span {
+			position: relative;
+			font-size: 12px;
+			top: 0;
+			left: -30px;
+			transition: all 200ms ease;
+		}
+		&:hover span {
+			left: -6px;
+		}
+	}
+}
+.title-border{
+	display: block;
+    height: 2px;
+    width: 100px;
+    margin: 0 auto;
+	margin-bottom: 32px;
+    background: $sectionTitleBorderColor;
+}
+
+.btn-custom{
+	background: $mainColor;
+	color: #FFF;
+	padding: 12px 14px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+	&:hover,
+	&:active,
+	&:focus{
+		color: #FFF;
+		text-decoration: none;
+		@include opacity(80);
+	}
+}
+
+section{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	
+	h3{
+		margin-top: 30px;
+	    padding-bottom: 12px;
+	    text-transform: uppercase;
+	    font-size: 1.226em;
+		margin-bottom: 32px;
+		border-bottom: 1px solid $sectionTitleBorderColor;
+
+		&:before {
+		    width: 12px;
+		    height: 12px;
+		    background: $mainColor;
+		    display: inline-block;
+		    content: ".";
+		    margin-right: 10px;
+		    text-indent: -12px;
+		    overflow: hidden;
+		    border-radius: 12px;
+		}
+		&.title-with-border:before {
+			display: none;
+		}
+	}
+
+	.title-border{
+		@extend .title-border;		
+	}
+	.title-with-border{
+		margin-bottom: 0;
+		border-bottom: 0;
+	}
+}
+a{
+	color: inherit;
+	&:hover{
+		cursor: pointer;
+		text-decoration: none;
+		color: inherit;
+	}
+	&:focus{
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+.quote{
+	margin-top: 80px;
+
+	blockquote {
+	    padding: 30px 0 50px;
+	    font-style: italic;
+	    font-weight: 300;
+	    line-height: 1.1;
+	    border: 0;
+
+		p{
+			font-size: 2.625em;
+			text-align: center;
+			margin: 0 auto;
+			text-transform: lowercase;
+			color: $lightTextColor;
+			
+			&:before{
+			    content: '“';
+			}
+			&:after{
+				content: '”';	
+			}
+			&:before,
+			&:after{
+				font-size: 1.2040em;
+				font-weight: 600;
+			}
+
+			@media (max-width: 767px){
+				font-size: 1.65em;
+			}	
+		}
+		footer {
+		    display: block;
+		    color: $mainColor;
+		    text-align: center;
+		    margin-top: 10px;
+		}
+	}
+	.title-border{
+		width: 200px;
+		background: transparent;
+        -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+        box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+
+        &:first-child{
+        	margin-left: 0;
+        }
+
+        &:last-child{
+        	margin-right: 0;
+        }
+	}
+}
+.likes{
+	ul{
+		padding: 0;
+	}
+	li {
+	    display:block;
+	    float: left;
+	    text-align: center;
+	    height: 60px;
+	    margin-bottom: 24px;
+	
+	    &:hover {
+			.ico-image {
+			    display: none;			   			   
+			}
+			.ico-text {
+		    	display: block;
+		    	cursor: default;
+			}
+		}
+	}
+	.ico-text {
+	    display: none;
+	    font-size: 15px;
+	    line-height: 60px;
+	}
+	.ico-image{
+		font-size: 52px;
+		color: $likesColor;
+		text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+	}
+}
+
+.contact{
+
+	a{		
+		&:hover,
+		&:visited{
+			text-decoration: none;
+			color: $textColor;
+		}
+		[class^="icon-"]{
+			font-size: 42px;
+			display: inline-block;
+			//float: left;
+			//margin-bottom: 12px;
+			color: $contactColor;
+			text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+			margin-left: 22px;
+		}
+		&:first-child [class^="icon-"]{
+				margin-left: 0;
+			}
+	}
+}

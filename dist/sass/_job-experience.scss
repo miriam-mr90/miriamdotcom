@@ -1,0 +1,97 @@
+.job-experience{
+	
+	margin-top: 30px;
+	.title-border{
+		width: 150px;
+		margin-bottom: 50px;
+
+		@media (max-width: 767px){
+			margin-bottom: 10px;
+		}		
+	}
+	
+	.download-cv{
+		margin-top: 40px;
+		margin-bottom: 20px;
+	}
+
+	.timeline-block{
+		display: flex;
+		
+		.timeline-arrow {
+		    display: block;
+		    position: relative;
+			
+			i{
+				background: none repeat scroll 0 0 #FFF;
+				border-left: 1px solid #CCCCCC;
+				border-top: 1px solid #CCCCCC;
+				display: block;
+				height: 10px;
+				left: -5px;
+				position: absolute;
+				top: 33px;
+				transform: rotate(-45deg);
+				-webkit-transform: rotate(-45deg);
+				-moz-transform: rotate(-45deg);
+				-ms-transform: rotate(-45deg);
+				-o-transform: rotate(-45deg);
+				width: 10px;
+				z-index: 10;
+			}
+		}
+	}
+	.timeline-year{
+		padding-top: 16px;
+	    background: url('http://wp.metrothemes.me/me-wp/wp-content/themes/me_wp/img/line.gif');
+	    background-repeat: repeat-y;
+	    background-position: calc(100% - 37px) 0;
+
+
+	    .ico-image{
+			background: $mainColor;
+			color: #FFF;
+			border-radius: 50%;
+			font-size: 18px;
+			padding: 13px;
+			margin-left: 22px;
+
+			&:hover{
+				cursor: pointer;
+			}
+	    }
+
+	    .timeline-year-text{
+	    	padding-top: 11px;
+	    }
+	}
+
+	.timeline-company {
+	    background-color: #FFF;
+	    border: 1px solid #CCCCCC;
+	    border-radius: 5px 5px 5px 5px;
+	    float: left;
+	    padding: 16px 30px 10px 30px;
+	    position: relative;
+	    width: 100%;
+		margin-bottom: 16px;
+
+		.timeline-head-title{
+			font-size: 24px;
+			//color: $mainColor;
+		}
+		p{
+			color: $lightTextColor;
+		}
+		.timeline-details{
+			margin-top: 24px;
+			ul{
+				padding-left: 20px;
+			}
+		}
+	}
+}
+
+
+
+

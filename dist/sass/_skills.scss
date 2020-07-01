@@ -1,0 +1,42 @@
+.skills{
+	.skills-item{
+	margin-bottom: 16px;
+
+		img{
+			max-width: 30px;
+			max-height: 30px;
+			height: auto;
+			width: auto;
+			margin-right: 12px;
+
+			display: none;
+		}
+	}
+}
+.tools-item{
+	margin-bottom: 16px;
+
+	img{
+		max-width: 100%;
+		max-height: 30px;
+		height: auto;
+		width: auto;
+		margin-right: 12px;
+
+		display: none;
+	}
+}
+
+.more-item{
+	margin-bottom: 16px;
+
+	.ico-image{
+		font-size: 30px;
+		color: $skillsColor;
+		float: left;
+		margin-right: 12px;
+    	margin-top: -3px;
+
+    	display: none;
+	}
+}
